@@ -1,13 +1,13 @@
 {
-  "name": "TODO",
+  "name": "breadboard-js",
   "description": "TODO",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build",
-    "export": "sapper export --basepath breadboard-js --legacy",
+    "export": "sapper export docs/",
     "start": "node __sapper__/build",
-    "deploy": "npm run export && node ./scripts/gh-pages.js"
+    "deploy": "echo no"
   },
   "dependencies": {
     "compression": "^1.7.1",
