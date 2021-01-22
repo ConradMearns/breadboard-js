@@ -1,50 +1,14 @@
-<script>
-	import successkid from 'images/successkid.jpg';
-</script>
+<!-- <svelte:head>
+	<title>Breadboard</title>
+</svelte:head> -->
 
-<style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
+<blockquote cite="https://en.wikipedia.org/wiki/Breadboard">
+"A breadboard is a construction base for prototyping of electronics.
+Originally the word referred to a literal bread board, a polished piece of wood used for slicing bread.
+In the 1970s the solderless breadboard (a.k.a. plugboard, a terminal array board) became available and nowadays the term "breadboard" is commonly used to refer to these."
+- <a href="https://en.wikipedia.org/wiki/Breadboard">Wikipedia</a>
+</blockquote>
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
+This site is a starting place to hosting Breadboard projects.
 
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
-</style>
-
-<svelte:head>
-	<title>Sapper project template</title>
-</svelte:head>
-
-<h1>Great success!</h1>
-
-<figure>
-	<img alt="Success Kid" src="{successkid}">
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+These projects are small, unorganized, and lack key sections of functionality.
