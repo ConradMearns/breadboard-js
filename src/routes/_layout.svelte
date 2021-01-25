@@ -8,7 +8,8 @@
 		"retro",
 		"prosemirror tests",
 		"Pomodoro Task Calculator",
-		"Event List"
+		"Event List",
+		"Hashing"
 	];
 
 	let isCollapsed = false;
