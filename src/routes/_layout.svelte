@@ -9,7 +9,8 @@
 		"prosemirror tests",
 		"Pomodoro Task Calculator",
 		"Event List",
-		"Hashing"
+		"Hashing",
+		"Routes"
 	];
 
 	let isCollapsed = false;
