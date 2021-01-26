@@ -12,6 +12,7 @@
   "dependencies": {
     "compression": "^1.7.1",
     "crypto-js": "^4.0.0",
+    "openpgp": "^4.10.10",
     "polka": "next",
     "sirv": "^1.0.0"
   },

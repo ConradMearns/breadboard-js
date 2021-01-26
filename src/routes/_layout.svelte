@@ -4,13 +4,15 @@
 	export let segment;
 
 	let boards = [
-		"A Pomodoro Timer",
-		"retro",
-		"prosemirror tests",
-		"Pomodoro Task Calculator",
-		"Event List",
-		"Hashing",
-		"Routes"
+		["🧪", "A Pomodoro Timer"],
+		["🧪", "Retro"],
+		["🧪", "Prosemirror Testing"],
+		["🧪", "Task Time Calculator"],
+		["🧪", "Event List"],
+		["🧪", "Hashing"],
+		["🧪", "Routes"],
+		["🧪", "Local Storage"],
+		["🧪", "PGP"]
 	];
 
 	let isCollapsed = false;
@@ -18,19 +20,23 @@
 </script>
 
 <nav class:collapsed="{isCollapsed}">
-	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">About</a></li>
+	<br>
+	<br>
 
-		{#each boards as b, i}
-			<li><a aria-current="{segment === {b} ? 'page' : undefined}" href="board{i}">{i}: {b}</a></li>
-		{/each}
-	</ul>
+	<span class="symbol">📜</span>
+	<a aria-current="{segment === undefined ? 'page' : undefined}" href=".">About</a>
+	
+	<br>
+
+	{#each boards as b, i}
+		<span class="symbol">{b[0]}</span>
+		<a aria-current="{segment === {b} ? 'page' : undefined}" href="board{i}">{b[1]}</a>
+		<br>
+	{/each}
 </nav>
 
-<!-- https://medium.com/@davidmellul/make-a-sidebar-for-your-website-the-easy-way-html5-css3-vanillajs-eccbb4d0cff6 -->
-
 <main>
-    <button on:click="{() => isCollapsed = !isCollapsed}"></button>
+    <button class:collapsed="{isCollapsed}" on:click="{() => isCollapsed = !isCollapsed}"></button>
 	<br>
 	<slot></slot>
 </main>
@@ -45,26 +51,48 @@ nav, main {
 
 nav {
   background:white;
-  width: 30%;
+  width: 15%;
+  white-space: nowrap;
 }
 
 nav.collapsed {
-  width: 0;
+  width: 2%;
+}
+
+.symbol {
+	padding: 10px;
 }
 
 nav.collapsed + main {
-  width: 100%;
+  width: 98%;
 }
 
 main {
-  background:gray;
-  width: 70%;
+  background:lightblue;
+  width: 85%;
 }
 
 button {
   width: 30px;
   height: 30px;
   margin: 10px;
-  /* background: black; */
+  /* background:lightblue; */
+  background: white;
+  border: 0;
+  position: relative;
+  top: 10px; left: -25px;
+  transform: rotate(45deg);
 }
+
+/* button.collapsed { */
+  /* background:lightblue; */
+  /* background: white; */
+/* } */
+
+button:hover {
+	border-width: 2px;
+	border-style: solid;
+	border-color: lightgoldenrodyellow;
+}
+
 </style>
